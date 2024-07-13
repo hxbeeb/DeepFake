@@ -17,15 +17,6 @@ pip install -r requirements.txt
 - You can run the file named [main.py](main.py).
 - Running on http://127.0.0.1:5000
 
-![1](https://github.com/onurkya7/VideoDeepFakeDetection/assets/100594545/fd979490-00d4-4172-a850-d0a4b6e4ba76)
-
-
-- Load your video(.mp4) file and test whether the file is real or not.
-
-
-![2](https://github.com/onurkya7/VideoDeepFakeDetection/assets/100594545/a085bb6d-19fe-4631-a5b0-344c46cf876f)
-
-
 ## Overview
 
 1- The video file is opened, and various video properties such as fps, width, and height are obtained.
@@ -53,8 +44,3 @@ If you want to contribute to this project, please follow these steps:
 - **Push:** Push your changes to the repository you forked.
 - **Pull Request:** Create a pull request on GitHub.
 
-
-## License
-
-Our project is licensed under the [MIT License](LICENSE).
-# DeepFake
