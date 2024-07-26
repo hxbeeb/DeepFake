@@ -4,21 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    
     <title>DeFendReality</title>
     <style>
         body {
             background-color: #D3D3D3;
             margin-bottom: 40px; 
+            font-family: Arial, sans-serif;
         }
         .container {
-            
-            margin-top: 20px; 
-            margin-bottom: 20px; 
+            margin-top: 5%;
+            margin-bottom: 20px;
         }
         .card {
-            margin-top: 10%; 
-            background-color:grey;
+            background-color: grey;
             border: 0;
             border-radius: 15px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -34,13 +32,33 @@
         }
         .card-body {
             padding: 15px; 
+            background-color: #fff;
+            border-radius: 0 0 15px 15px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
         .btn-primary {
             background-color: black;
             border: 0;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
         .btn-primary:hover {
-            background-color: black;
+            background-color: #333;
         }
         footer {
             background-color: grey;
@@ -49,6 +67,11 @@
             width: 100%;
             position: fixed;
             bottom: 0;
+            text-align: center;
+        }
+        .navbar {
+            padding-top: 0px;
+            padding-bottom: 5px;
         }
     </style>
 </head>
@@ -56,11 +79,10 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="#">Nigga Catcher</a>
+        <a class="navbar-brand" href="#">DeFendReality</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        
     </div>
 </nav>
 
@@ -70,26 +92,26 @@
             <h1 class="card-title">Deepfake Detection</h1>
         </div>
         <div class="card-body">
+            <h2>Upload a Video or Enter a Video Link</h2>
             <form action="/upload" method="post" enctype="multipart/form-data">
-                <div class="mb-3">
-                    <label for="customFile" class="form-label">Choose file</label>
-                    <input type="file" class="form-control" id="customFile" name="file" onchange="updateFileName()">
+                <div class="form-group">
+                    <label for="video_link">Video Link:</label>
+                    <input type="text" id="video_link" name="video_link" class="form-control">
                 </div>
-                <button type="submit" class="btn btn-primary mt-3">Upload</button>
+                <div class="form-group">
+                    <label for="file">Or Upload a Video File:</label>
+                    <input type="file" id="file" name="file" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Submit</button>
             </form>
         </div>
     </div>
 </div>
 
-
+<footer>
+    &copy; 2024 DeFendReality. All rights reserved.
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    function updateFileName() {
-        var fileName = document.getElementById("customFile").files[0].name;
-        document.getElementById("customFile").nextElementSibling.innerHTML = fileName;
-    }
-</script>
-
 </body>
 </html>
